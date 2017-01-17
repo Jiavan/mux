@@ -92,5 +92,5 @@ define(['zepto'], function ($) {
   return {
     init: init,
     getOptions: getOptions
-  }
+  };
 });
