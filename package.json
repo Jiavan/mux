@@ -1,0 +1,22 @@
+{
+  "name": "mux-lib",
+  "version": "0.0.1",
+  "description": "M***** user experience library",
+  "main": "index.js",
+  "scripts": {
+    "prepush": "eslint src"
+  },
+  "keywords": [
+    "mux-lib, mux"
+  ],
+  "author": "Jiavan, jiavan.com@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "husky": "^0.12.0",
+    "requirejs": "^2.3.2"
+  }
+}

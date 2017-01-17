@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>scroll spy</title>
+  <link rel="stylesheet" href="../../lib/style/normalize.css">
+  <style>
+    ul, li {
+      margin: 0;
+      padding: 0;
+      font-size: .16rem;
+    }
+    .scroll-spy {
+      list-style-type: none;
+      background: #ff9900;
+      display: flex;
+      width: 100%;
+      opacity: .5;
+    }
+    li {
+      flex: 1;
+      text-align: center;
+      line-height: .3rem;
+      display: inline-block;
+      color: #fff;
+    }
+    section {
+      height: 8rem;
+      color: grey;
+    }
+    section:nth-of-type(1) {
+      background: cyan;
+    }
+    section:nth-of-type(2) {
+      background: magenta;
+    }
+    section:nth-of-type(3) {
+      background: yellow;
+    }
+    section:nth-of-type(4) {
+      background: black;
+    }
+    header {
+      height: 3rem;
+      background: #aa00ff;
+    }
+    .fixed {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+    .active {
+      background: #666;
+      color: #fff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <ul class="scroll-spy">
+    <li class="active">Cyan</li>
+    <li>Magenta</li>
+    <li>Yellow</li>
+    <li>Key</li>
+  </ul>
+  <section class="scroll-spy-item">0</section>
+  <section class="scroll-spy-item">1</section>
+  <section class="scroll-spy-item">2</section>
+  <section class="scroll-spy-item">3</section>
+  <script src="../../lib/script/require.js"></script>
+  <script>
+    require.config({
+      paths: {
+        zepto: '../../lib/script/zepto'
+      }
+    });
+    require(['scrollSpy'], function (ScrollSpy) {
+      ScrollSpy.init({ offset: 0 });
+    });
+  </script>
+</body>
+</html>
